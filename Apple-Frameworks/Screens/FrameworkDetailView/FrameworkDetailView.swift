@@ -17,7 +17,7 @@ struct FrameworkDetailView: View {
     var body: some View {
         VStack{
             
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
+//            XDismissButton(isShowingDetailView: $isShowingDetailView)
             
             Spacer()
             
@@ -32,8 +32,14 @@ struct FrameworkDetailView: View {
             Button{
                 isShowingSafariView = true
             }label: {
-                AFButton(title: "Learn More")
+//                AFButton(title: "Learn More")
+                Label("Learn More",systemImage: "book.fill")
             }
+            .buttonStyle(.bordered)
+//            .foregroundColor(.blue)
+            .controlSize(.large)
+//            .buttonBorderShape(.roundedRectangle(radius: 100))
+            .tint(.red)
         }
         .sheet( isPresented: $isShowingSafariView, content: {
             SafariView(url: URL(string:framework.urlString) ?? URL(string: "www.apple.com")!)
