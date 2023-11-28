@@ -15,8 +15,6 @@ struct FrameworkGridView: View {
                              GridItem(.flexible()) ,
                              GridItem(.flexible())  ]
     
-    
-    
     var body: some View {
         NavigationView{
            ScrollView {
